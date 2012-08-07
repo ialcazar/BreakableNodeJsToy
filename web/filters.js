@@ -1,4 +1,4 @@
-var routesUtil = require("./routesUtil.js");
+var routesUtil = require("./urlUtils.js");
 //var auth = require("security/auth.js");
 var base64 = require("../util/base64.js");
 module.exports = function(app, logger){
@@ -23,7 +23,8 @@ module.exports = function(app, logger){
      
       requestPath = routesUtil.removeLastSlash(requestPath);
 
-      //TODO: Authenticate /rest/v1/users/{username}
+       logger.info("Autenticating URI "+ requestPath);
+
       if(typeof authHeader ==='undefined'){
         res.json(403,
           {
