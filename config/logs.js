@@ -1,3 +1,6 @@
+/**
+  Basic logging system
+*/
 var fs = require("fs");
 var ENCODING = "utf8";
 
