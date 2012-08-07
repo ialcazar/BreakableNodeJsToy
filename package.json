@@ -1,0 +1,13 @@
+{
+  "name": "atdesknode",
+  "description": "atdesk with nodejs",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "winston":"*", //Logging
+    "express": "3.x",  //web
+    "express-negotiate": "*", //Content negocitation
+    "jade":"*"    //Templating
+    
+  }
+}
