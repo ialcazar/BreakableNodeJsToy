@@ -1,3 +1,5 @@
+var urlUtils = exports;
+
 var removeLastSlash = function(msg){
   var msgLength =msg.length;
    if(msg.charAt(msgLength-1) ==="/"){
