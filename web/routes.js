@@ -44,7 +44,6 @@ var routers = module.exports = function(app,logger){
       logger.info("Request to " +RESTBASE+ " [Accept:"+req.headers.accept+"]");
       res.format({  
         json: function(){
-          var menu = model.menu();
           res.json(404,
               {
               'links':[
