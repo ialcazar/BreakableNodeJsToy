@@ -2,9 +2,10 @@ var routesUtil = require("./urlUtils.js");
 //var auth = require("security/auth.js");
 var base64 = require("../util/base64.js");
 module.exports = function(app, logger){
-  
+
+  var RESTBASE = app.RESTBASE;
   //CORS
-  app.all('*', function(req, res, next){
+  app.all(RESTBASE+'/*', function(req, res, next){
     logger.info("Enabling CORS");
     res.removeHeader("X-Powered-By");
     res.header("Access-Control-Allow-Origin", "*");
@@ -16,7 +17,7 @@ module.exports = function(app, logger){
 
    //Autentication & Authorization support
     //see http://blog.nodejitsu.com/a-simple-webservice-in-nodejs
-    app.all('*', function(req, res, next){
+    app.all(RESTBASE+'/*', function(req, res, next){
       logger.info("Retrieving Authorization header");
       var authHeader = req.headers.authorization;
       var requestPath = req.path;
