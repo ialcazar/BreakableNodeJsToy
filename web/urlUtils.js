@@ -9,4 +9,4 @@ var removeLastSlash = function(msg){
   return msg;
 };
 
-exports.removeLastSlash = removeLastSlash;
+urlUtils.removeLastSlash = removeLastSlash;
