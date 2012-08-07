@@ -29,7 +29,8 @@ module.exports = function(app, logger){
       if(typeof authHeader ==='undefined'){
         res.json(403,
           {
-            'error':'You have to provide Authorization Header with the following format: Basic base64(user:password)',
+            'error':'You have to provide "Authorization" Header with the following format: Basic base64(user:password)',
+            'example':'Authorization: Basic YWRtaW46YWRtaW4= where "YWRtaW46YWRtaW4" is base64(admin:admin)'
           });
       }else{
         //Authorization
