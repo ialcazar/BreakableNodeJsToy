@@ -21,6 +21,7 @@ var filters = module.exports = function(app, logger){
     app.all(RESTBASE+'/*', function(req, res, next){
       logger.info("Autenticating URI "+ req.path);
       if(!auth.basic(req)){
+          logger.info("Autentication failure with [code="+auth.statusCode()+" ,msg="+auth.message()+"]");
           res.json(auth.statusCode(),
             {
               'error':auth.message()

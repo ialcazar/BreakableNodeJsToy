@@ -33,6 +33,7 @@ var auth = module.exports = {
         username = credentials[0];
         password = credentials[1];
 
+         logger.info("User [username="+username+",password="+password+"]");
         if (scheme !== "Basic"){
           message = 'Authorization scheme must be "Basic"';
           return false;
