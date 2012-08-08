@@ -18,7 +18,7 @@ app.RESTBASE = "/rest/v1";
 var routes = require('./web/routes.js')(app,logger);
 
 //Configure logs
-logger.add(logger.transports.File, { filename: 'logs/main.log',level:'info',json:false,maxsize:'1024',handleExceptions: true });
+logger.add(logger.transports.File, { filename: 'logs/main.log',level:'info',json:false,maxsize:'10240',handleExceptions: true });
 logger.info("Url base REST:  "+app.RESTBASE);
 
 app.configure(function(){ 

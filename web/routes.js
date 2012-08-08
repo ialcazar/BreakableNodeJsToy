@@ -59,7 +59,21 @@ var routers = module.exports = function(app,logger){
       });
      
     });
-
+    app.get(RESTBASE+"/users", function(req, res,next){
+      var param =req.query;
+      var nombre = param.nombre;
+      var apellidos = param.apellidos;
+      var areaTrabajoId = param.areaTrabajo;
+      var centroTrabajoId = param.centroTrabajoId;
+      logger.info("User[nombre:"+nombre+",apellidos:"+apellidos+",areaTrabajoId:"+areaTrabajoId+",centroTrabajoId:"+centroTrabajoId);
+      res.format({
+        json: function(){
+          var users = model.userBy(nombre,apellidos,areaTrabajoId,centroTrabajoId);
+          res.json(users);
+        }
+      });
+     
+    });
     app.get(RESTBASE+"/users/:id", function(req, res,next){
       var id = req.params.id;
       logger.info("User id: "+id);
