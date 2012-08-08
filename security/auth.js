@@ -1,8 +1,9 @@
 var base64 = require("../util/base64.js"),
       routesUtil = require("../web/urlUtils.js"),
       logger = require('winston');
-var statusCode = 403;
-var message ="";
+
+var statusCode = 403,
+     message ="";
 
 var auth = module.exports = {
  
