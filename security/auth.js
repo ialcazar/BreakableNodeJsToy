@@ -23,7 +23,7 @@ var auth = module.exports = {
       requestPath = routesUtil.removeLastSlash(requestPath);
        //Authorization
       if(typeof authHeader ==='undefined'){
-        message = 'You have to provide "Authorization" Header with the following format: Basic base64(user:password) .e.g: Authorization: Basic YWRtaW46YWRtaW4= where "YWRtaW46YWRtaW4" is base64(admin:admin)'
+        message = 'You have to provide \"Authorization\" Header with the following format: Basic base64(user:password) .e.g: Authorization: Basic YWRtaW46YWRtaW4= where \"YWRtaW46YWRtaW4\" is base64(admin:admin)'
         return false;
       }else{
         authParts = authHeader.split(" "); //Basic asdfASdf
