@@ -1,6 +1,6 @@
 {
-  "name": "atdesknode",
-  "description": "atdesk with nodejs",
+  "name": "breakablenodejstoy",
+  "description": "A breakable nodeJs Toy in order to learn something about nodejs",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
