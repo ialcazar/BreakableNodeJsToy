@@ -30,7 +30,7 @@ var routers = module.exports = function(app,logger){
                 {
                    'links':[
                   {
-                    'type':'application/json',
+                    'type':'application/json','text/html',
                     'rel':'Root API',
                     'uri':'http://<server>:<port>/rest/v1/'
                   }
