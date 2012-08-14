@@ -32,7 +32,7 @@ var routers = module.exports = function(app,logger){
                   {
                     'type':'application/json',
                     'rel':'Root API',
-                    'uri':'http://localhost:4000/rest/v1/'
+                    'uri':'http://<server>:<port>/rest/v1/'
                   }
                 ]
                 });
@@ -50,7 +50,7 @@ var routers = module.exports = function(app,logger){
                   {
                     'type':'application/json',
                     'rel':'User Details',
-                    'uri':'http://localhost:4000/rest/v1/users/{username}'
+                    'uri':'http://<server>:<port>/rest/v1/users/{username}'
                   }
                 ]
               }
