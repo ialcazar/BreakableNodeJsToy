@@ -1,4 +1,4 @@
-./logs/*
+./logs/*.log
 /public/*
 ./.git/*
 /node_modules/*
