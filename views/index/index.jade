@@ -1,6 +1,9 @@
 extends ../layout
 block content
   h1 Welcome to just another breakable nodejs toy
-  #users You can find the following services:
-     span We have an amazing RESTful API. Your entry point is <a href="rest/v1/">rest/v1/</a> as your entry point
+  #users  We have an amazing RESTful API. Your entry point is <a href="rest/v1/">rest/v1/</a>
+  div You need to send 'Authorization' header with the user admin:admin with the following format: Authorization:Basic YWRtaW46YWRtaW4
+  div Where YWRtaW46YWRtaW4 is a base64(admin:admin).
+  h2 No more users are allowed
+  h2 Enjoy!
   
