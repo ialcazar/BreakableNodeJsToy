@@ -51,6 +51,11 @@ var routers = module.exports = function(app,logger){
                     'type':'application/json',
                     'rel':'User Details',
                     'uri':'http://<server>:<port>/rest/v1/users/{username}'
+                  },
+                    {
+                    'type':'application/json',
+                    'rel':'Find Users By name and surname',
+                    'uri':'http://<server>:<port>/rest/v1/users?nombre={nombre}&apellidos={apellidos}'
                   }
                 ]
               }
